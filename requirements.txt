@@ -1,0 +1,12 @@
+six==1.14.0
+apispec==0.38.0
+Flask_Script==2.0.6
+flask_marshmallow==0.7.0
+Flask_Migrate==2.5.3
+Flask==1.0.2
+Flask_SQLAlchemy==2.4.1
+flask_restplus==0.11.0
+webargs==5.1.2
+marshmallow==2.18.1
+Flask_Session==0.3.1
+Werkzeug==0.14.1
