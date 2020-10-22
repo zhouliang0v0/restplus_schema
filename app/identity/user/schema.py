@@ -8,9 +8,16 @@ class UserSchema(ModelSchema):
     """
     Base Admin schema exposes only the most general fields.
     """
-    test = base_fields.String(required=True)
-    email = base_fields.Email()
+    test = base_fields.String(required=True, allow_none=True)
+    # email = base_fields.Email()
+    # count1 = base_fields.Function(lambda obj: len(obj.test))
+
+    count = base_fields.Method('my_get_count', required=True)
 
     class Meta:
         model = Admin
-        fields = 'uuid', 'test', 'email'
+        fields = 'uuid', 'test', 'email', 'count'
+
+    def my_get_count(self, obj):
+        # print(obj)
+        return 100
